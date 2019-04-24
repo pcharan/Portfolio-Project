@@ -1,13 +1,15 @@
 ﻿
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Charans Home Page</title>
+    <title>Home Page</title>
+    <link rel="icon" href="../../media/depositphotos_75677059-stock-illustration-p-letter-eco-logo-volume.jpg" type="image/x-icon">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -29,28 +31,29 @@
                 font-size: 3.5rem;
             }
         }
+        .img-circle {
+            border-radius: 50%;
+        }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Charan</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Charan</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Twitter </a>
+                        <a class="nav-link" href="https://twitter.com/CharansidduP">Twitter </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="{% static 'CharanResume.pdf' %}">Resume</a>
                     </li>
                 </ul>
             </div>
@@ -61,9 +64,10 @@
 
         <section class="jumbotron text-center">
             <div class="container">
+                <img class="img-circle" src="{% static 'charan.jpg' %}" height="150"/>
                 <h1 class="jumbotron-heading">Hi, I'm Charan</h1>
-                <p>My Name P.Charan Siddartha Reddy & I'm Working as Associate Software Engineer in Scientific Games</br>
-                    <a href="#" class="btn btn-primary my-2">Email Me</a>
+                <p>My Name P.Charan Siddartha Reddy & I'm Cool silent guy</br>
+                    <a href="mailto:p.charansiddu@gmail.com" class="btn btn-primary my-2">Email Me</a>
                 </p>
             </div>
         </section>
